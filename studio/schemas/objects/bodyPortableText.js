@@ -73,5 +73,10 @@ export default {
       options: {hotspot: true}
     },
     {type: 'reference', to:[{type: 'post'}]}
+    ,
+
+    {
+      type: 'videoEmbed'
+    }
   ]
 }

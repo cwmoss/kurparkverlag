@@ -9,11 +9,12 @@
           <h2>{{section.title?section.title:section.ref.title?section.ref.title:section.ref.name}}</h2>
           
           <div v-if="section.ref._type=='tour'">
-            <table>
+            <p>{{section.ref.title}}</p>
+            <table class="termine">
               <tbody>
                 <tr v-for="termin in section.ref.events">
                   <td>{{termin.start}}</td>
-                  <td>{{termin.city}}</td>
+                  <td><strong>{{termin.city}}</strong></td>
                   <td>{{termin.location}}</td>
                 </tr>
               </tbody>

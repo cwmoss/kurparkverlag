@@ -1,6 +1,7 @@
 import S from '@sanity/desk-tool/structure-builder'
 import MdSettings from 'react-icons/lib/md/settings'
 import MdPerson from 'react-icons/lib/md/person'
+import DraftsIcon from "react-icons/lib/fa/pencil"
 
 const hiddenDocTypes = listItem =>
   !['tour', 'author', 'post', 'siteSettings'].includes(listItem.getId())
@@ -11,9 +12,9 @@ export default () =>
     .items([
       
       S.listItem()
-        .title('Blog posts')
+        .title('Inhalte')
         .schemaType('post')
-        .child(S.documentTypeList('post').title('Blog posts')),
+        .child(S.documentTypeList('post').title('Inhalte')),
 
       S.listItem()
         .title('Seiten')
@@ -31,7 +32,17 @@ export default () =>
         .schemaType('author')
         .child(S.documentTypeList('author').title('Authors')),
 
-      ...S.documentTypeListItems().filter(hiddenDocTypes),
+      S.listItem()
+        .title("Entwürfe")
+        .icon(DraftsIcon)
+        .child(
+          S.documentList()
+            .title("Entwürfe")
+            .filter("_id in path('drafts.**')")
+            .defaultOrdering([{ field: "_updatedAt", direction: "desc" }])
+        ),
+
+      // ...S.documentTypeListItems().filter(hiddenDocTypes),
       S.listItem()
         .title('Settings')
         .icon(MdSettings)
@@ -41,4 +52,5 @@ export default () =>
             .schemaType('siteSettings')
             .documentId('siteSettings')
         ),
+
     ])

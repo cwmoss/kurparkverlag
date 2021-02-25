@@ -8,13 +8,20 @@
 </template>
 
 <script>
+import VideoEmbed from '~/components/VideoEmbed'
 import PortableText from 'sanity-blocks-vue-component'
 
+/*
+
+https://github.com/rdunk/sanity-blocks-vue-component
+
+*/
 export default {
   props: {
     blocks: Array
   },
   components: {
+    VideoEmbed,
     PortableText
   },
   data() {
@@ -39,7 +46,8 @@ export default {
             <div class="teaser">
               <h2>{node.title}</h2><a href={node.path}>read more</a>
             </div>
-          )
+          ),
+          videoEmbed: VideoEmbed
         },
       marks: {
           authorLink: ({mark, children}) => {
@@ -53,6 +61,9 @@ export default {
 
       }
     }
+  },
+  mounted(){
+    console.log("mounted", this.blocks)
   }
 }
 </script>

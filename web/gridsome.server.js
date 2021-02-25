@@ -8,6 +8,14 @@ const clientConfig = require('./client-config')
 
 module.exports = function (api) {
 
+  api.createSchema(({ addSchemaTypes }) => {
+    addSchemaTypes(`
+      type SanityDocument implements Node @infer {
+        id: ID!
+      }
+    `)
+  })
+  
 	api.loadSource(store => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
     store.addMetadata('sanityOptions', clientConfig.sanity)
@@ -25,4 +33,5 @@ module.exports = function (api) {
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
+
 }

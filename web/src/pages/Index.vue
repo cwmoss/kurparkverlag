@@ -57,7 +57,9 @@ query  {
           _type
           title
           events{
-            start, city, location
+            start(format: "DD.MM.YYYY")
+            city
+            location
           }
         }
         ... on SanityPost{

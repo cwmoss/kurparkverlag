@@ -7,6 +7,7 @@ export default {
       name: 'project-info',
       options: {
         __experimental_before: [
+         /* 
           {
             name: 'netlify',
             options: {
@@ -28,6 +29,7 @@ export default {
               ]
             }
           },
+          */
           {name: 'deploybutton', layout: {height: 'auto'}, options: {site: {name:'kpv', key:'555-xDGEw'}}}
         ],
         data: [
@@ -36,14 +38,15 @@ export default {
             value: 'https://github.com/cwmoss/kurparkverlag-gs',
             category: 'Code'
           },
-          {title: 'Frontend', value: 'https://kurparkverlag-gs.netlify.com', category: 'apps'}
+       //   {title: 'Frontend', value: 'https://kurparkverlag-gs.netlify.com', category: 'apps'}
+          {title: 'Frontend', value: 'https://kurparkverlag.de', category: 'apps'}
         ]
       }
     },
     {name: 'project-users', layout: {height: 'auto'}},
     {
       name: 'document-list',
-      options: {title: 'Recent blog posts', order: '_createdAt desc', types: ['post']},
+      options: {title: 'Neueste Inhalte', order: '_createdAt desc', types: ['post']},
       layout: {width: 'medium'}
     }
   ]

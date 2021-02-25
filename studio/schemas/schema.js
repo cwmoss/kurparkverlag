@@ -12,6 +12,7 @@ import page from './documents/page'
 import siteSettings from './documents/siteSettings'
 
 // Object types
+import videoEmbed from './objects/videoEmbed'
 import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
@@ -36,6 +37,7 @@ export default createSchema({
     tour,
     author,
     mainImage,
+    videoEmbed,
     authorReference,
     bodyPortableText,
     bioPortableText,
