@@ -7952,6 +7952,11 @@ react-icons@^2.2.7:
   dependencies:
     react-icon-base "2.1.0"
 
+react-icons@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
+  integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
+
 react-ink@^6.1.0:
   version "6.5.1"
   resolved "https://registry.npmjs.org/react-ink/-/react-ink-6.5.1.tgz#0476652c9de16826889070d76154271e3e9f2282"
@@ -8551,6 +8556,11 @@ sanity-plugin-dashboard-widget-netlify@^1.0.1:
     abort-controller "^2.0.3"
     react-props-stream "^1.0.0"
     rxjs "^6.0.0"
+
+sanity-secrets@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/sanity-secrets/-/sanity-secrets-0.1.0.tgz#87c4ea6e3568957dad98d5b191655e582f0a9cc8"
+  integrity sha512-Lm1c4Cv7+0vLUA8Yp214oABwGkJ0AenYIE/og6Y37I6CUU3zSR62iAeWxhuwYvW9We4mCcEn/JxmcbUqE0Azyw==
 
 sax@~1.2.4:
   version "1.2.4"

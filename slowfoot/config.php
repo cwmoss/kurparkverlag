@@ -52,8 +52,10 @@ return [
         }
     ],
     'hooks' => [
-       # 'on_load' => function ($row, $ds) {
-       #     return $row;
-       # }
+        'after_build' => function ($conf) {
+            file_put_contents($conf['dist'].'/Version', date("YmdHis"));
+            `cd {$conf['base']}; rsync -avz dist/ ../htdocs/`;
+        }
     ]
+    // `cd $dir; rsync -avz dist/ ../htdocs/`;
 ];

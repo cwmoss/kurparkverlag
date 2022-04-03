@@ -5,7 +5,7 @@ layout("default");
 
 ?>
 <br>
-<a href="/" class="link">  &larr; Zurück</g-link>
+<a href="/" class="link">  &larr; Zurück</a>
 
 <div class="post-title">
     <h1><?=$page['title']?></h1>

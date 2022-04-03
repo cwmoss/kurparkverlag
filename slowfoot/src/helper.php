@@ -1,9 +1,5 @@
 <?php
 
-if (!defined('SLOWFOOT_BASE')) {
-    define('SLOWFOOT_BASE', __DIR__ . '/../');
-}
-
 hook::add('sanity.resolve_link', function($m, $ds){
     var_dump($m);
 });
