@@ -20,7 +20,7 @@ $img = $ref($doc['mainImage']['asset']);
           <tbody>
             <?foreach($doc['events'] as $termin){?>
             <tr>
-              <td><?=$termin['start']?></td>
+              <td><?=date('d.m.Y', strtotime($termin['start']))?></td>
               <td><strong><?=$termin['city']?></strong></td>
               <td><?=$termin['location']?></td>
             </tr>
