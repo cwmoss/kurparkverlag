@@ -1,4 +1,6 @@
 <?php
+if($page['is_page'] != true) return null;
+
 layout("default");
 
 ?>
@@ -10,7 +12,7 @@ layout("default");
 </div>
 
 <div class="post-content">
-    
+
     <?if($page['body']){?>
         <?=$partial('block', ['body'=>$page['body']])?>
     <?}?>  

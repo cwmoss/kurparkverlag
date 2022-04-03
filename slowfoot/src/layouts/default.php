@@ -12,7 +12,7 @@ debug_js('settings', $settings);
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="SHORTCUT ICON" href="/favicon.png">
+    <link rel="SHORTCUT ICON" type="image/png" href="/gfx/favicon.png">
     <link rel="stylesheet" href="<?=path_asset('/css/kpv.css', true)?>" type="text/css">
     
     

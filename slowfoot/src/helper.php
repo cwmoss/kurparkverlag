@@ -8,7 +8,7 @@ hook::add('sanity.resolve_link', function($m, $ds){
     var_dump($m);
 });
 
-hook::add_filter('sanity.block_serializers', function($ds, $config){
+hook::add_filter('sanity.block_serializers', function($serializers, $ds, $config){
     return [
         'marks'=>[
             'link' => [
@@ -37,18 +37,7 @@ hook::add_filter('sanity.block_serializers', function($ds, $config){
             // print_r($item);
             return sprintf('<div class="video">%s</div>', convertYoutube($item['attributes']['url']));
         },
-        'xxxlistItem' => function ($item, $parent, $htmlBuilder) {
-          return '<li class="my-list-item">' . implode('\n', $item['children']) . '</li>';
-        },
-        'xxxgeopoint' => function ($item) {
-          $attrs = $item['attributes'];
-          $url = 'https://www.google.com/maps/embed/v1/place?key=someApiKey&center=';
-          $url .= $attrs['lat'] . ',' . $attrs['lng'];
-          return '<iframe class="geomap" src="' . $url . '" allowfullscreen></iframe>';
-        },
-        'xxxpet' => function ($item, $parent, $htmlBuilder) {
-          return '<p class="pet">' . $htmlBuilder->escape($item['attributes']['name']) . '</p>';
-        }
+        
     ];
 });
 
