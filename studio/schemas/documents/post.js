@@ -21,7 +21,14 @@ export default {
         maxLength: 96
       }
     },
-
+    {
+      name: 'is_page',
+      type: 'boolean',
+      description:
+        'Does it have a its own Page?',
+      title: 'No / Yes',
+      initialValue: false
+    },
     {
       name: 'mainImage',
       type: 'mainImage',

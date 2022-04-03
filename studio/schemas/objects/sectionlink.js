@@ -11,6 +11,9 @@ export default {
     },
     {
       type: 'tour'
+    },
+    {
+      type: 'page'
     }
   ]
 

@@ -40,8 +40,8 @@ module.exports = {
         ...clientConfig.sanity,
         typeName: 'Sanity',
         token: process.env.SANITY_TOKEN,
-        overlayDrafts: !isProd,
-        watchMode: !isProd
+        //overlayDrafts: !isProd,
+        //watchMode: !isProd
       }
     }
 /*

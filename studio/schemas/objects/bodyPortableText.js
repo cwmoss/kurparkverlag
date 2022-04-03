@@ -52,6 +52,8 @@ export default {
                 title: 'Reference',
                 to: [
                   { type: 'author' },
+                  { type: 'post' },
+                  { type: 'page' },
                   // other types you may want to link to
                 ]
               }
