@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+	<title>Kurparkverlag</title>
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="kommissar ritter vom BKA, krimi, verlag" />
+	<meta name="keywords" content="Spannung, Lesen" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lora:700|Work+Sans:300&display=swap" rel="stylesheet">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,700,600,500,300,200' rel='stylesheet' type='text/css' -->
+
+<style type="text/css">
+
+body *{
+	font-family: "Work Sans", sans-serif;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+h1, h2, h3{
+	font-family: "Lora", serif;
+}
+.container{
+	display: flex; 
+	height: 100%;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+}
+
+.content{
+	width: 500px;
+	align-items: center;
+}
+
+.obscure{
+  cursor: pointer;
+}
+.list-item {
+  display: inline-block;
+  /*width: 16px;*/
+  margin-right: 3px;
+  transition: all 0.5s;
+}
+
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-leave-active {
+  position: absolute;
+}
+.list-move {
+  /*transition: transform 5.5s;
+  */
+}
+
+[v-cloak] { display: none; }
+
+</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="content" id="content" v-cloak>
+
+			<h1>Kurparkverlag</h1>
+			<p>Für Anfragen, senden Sie bitte eine E-Mail an:</p>
+
+			<div @click="lesbar" class="obscure">
+		    <transition-group name="list" tag="p" >
+		      <b v-for="item in items" v-bind:key="item.id" class="list-item" :id="item.id">{{ item.val }}</b>
+		    </transition-group>
+		  </div>
+		  <p>&nbsp;<br>&nbsp;</p>
+		</div>
+
+	</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+new Vue({
+  el: '#content',
+  data: {
+    mail: 'moc,liamg+galrevkrapruk',
+    items: []
+  },
+  methods: {
+    lesbar: function(){
+      this.items = this.mail.replace('+', '@').replace(',', '.').split('').map((v, k) => {
+        return {id:k, val:v}
+      }).reverse()
+    }
+  },
+  mounted: function(){
+    this.items = this.mail.replace('+', '@').replace(',', '.').split('').map((v, k) => {
+      return {id:k, val:v}
+    }).sort(() => Math.random() - 0.5)
+    window.setTimeout(this.lesbar, 500);
+  }
+})
+
+</script>
+
+</body>
+</html>
