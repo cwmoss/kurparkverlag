@@ -31,6 +31,21 @@ export default {
       description: 'Publish an author and set a reference to them here.',
       title: 'Author',
       to: [{type: 'author'}]
+    },
+    {
+      title: "Footer",
+      name: "footer",
+      type: 'array',
+      of: [
+        {
+          type: "section",
+        }
+      ],
+      options:{
+        // sortable: false,
+         //editModal: 'popover'
+        // layout: 'grid'
+      }
     }
   ]
 }

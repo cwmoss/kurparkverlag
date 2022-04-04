@@ -30,7 +30,7 @@ export default {
             }
           },
           */
-          {name: 'deploybutton', layout: {height: 'auto'}, options: {site: {name:'kpv', key:'555-xDGEw'}}}
+          {name: 'deploy-website', layout: {height: 'auto'}, options: {site: {name:'kpv', key:'555-xDGEw'}}}
         ],
         data: [
           {

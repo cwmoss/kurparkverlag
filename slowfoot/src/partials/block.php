@@ -1,0 +1,5 @@
+<?php
+
+?>
+  <?=$sanity_text($body)?>
+
