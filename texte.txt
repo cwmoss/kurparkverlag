@@ -1,0 +1,18 @@
+TOUR DATES – LESUNG: RITTER VOM BKA #2 – KURPARK VERLAG
+
+16.02.: Pforzheim - Roland
+
+26.02.: Bad Wildbad - Bellevue
+
+27.02.: Vaihingen/Enz - Mit Charme
+
+28.02.: Karlsruhe - Coffee in
+
+05.03.: Berlin – L.U.X.
+
+11.03.: Leipzig – tba
+
+27.03.: Schwann - Zauberberg
+
+
+export PKG_CONFIG_PATH="${PKG_CONFIG_PATH}:/usr/local/opt/libffi/lib/pkgconfig"

@@ -1,0 +1,14 @@
+*[_type == 'post' && 
+  body[].markDefs[]._type == 'authorLink']{
+  title,
+   body[]{
+     markDefs[]{
+       _type == "authorLink" => {
+        "slug": @.reference->slug
+      }
+     }
+   }
+   
+}
+
+

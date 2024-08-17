@@ -1,0 +1,36 @@
+query Page($_id:ID, $sid: [String]){
+  projects: allSanityProject(limit:2, filter:{id:{eq: $_id}}){
+    edges{
+      node{
+        id
+        _id
+        title{de}
+      }
+    }
+  }
+  all:  allSanityEvent(limit:20){
+    edges{
+      node{
+      id
+    
+    	title{de}
+    	projects{id}
+      xprojects
+    	}
+    }
+  }
+
+  events: allSanityEvent(limit:2, filter:{xprojects:{contains:$sid}}){
+    edges {
+    node{
+ 			id
+      _id
+      title{de}
+     
+     path
+    }
+   }
+  }
+  
+
+}
