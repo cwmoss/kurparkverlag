@@ -1,1 +1,0 @@
-# kurparkverlag-gs-studio
