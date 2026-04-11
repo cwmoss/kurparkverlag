@@ -9,7 +9,6 @@ node_modules/
 .env
 .netrc
 .htaccess
-.DS_Store
 *.mdb
 *.db
 movies.json
