@@ -1,3 +1,4 @@
+.DS_Store
 etc/
 vendor/
 logs/
@@ -18,14 +19,10 @@ cache/*
 download/*
 rendered-images/*
 
+var/
 
-# Mac files
-.DS_Store
-
-# Dependency directories
 /node_modules
 
-# lerna files
 /lerna-debug.log
 remote/
 remote-server/vendor

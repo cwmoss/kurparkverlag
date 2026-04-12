@@ -1,5 +1,7 @@
 <?php
 
+use slowfoot\image\profile;
+
 return [
     'site_name' => 'Kurpark Verlag',
     'site_description' => 'krimis, ritter vom bka, max müller, spannung, unterhaltung',
@@ -9,14 +11,14 @@ return [
     'title_template' => '',
     'store' => 'sqlite',
     'sources' => [
-        
+
         'sanity' => [
             'dataset' => 'production',
             'projectId' => 'mfsmduab',
             'useCdn' => true,
             // 'query' => '*[_type=="custom-type-query"]'
         ]
-        
+
     ],
     'preview' => [
         'sanity' => [
@@ -35,25 +37,25 @@ return [
     'assets' => [
         'dir' => 'images',
         'path' => '/images',
-        'download' => true, 
+        'download' => true,
         'profiles' => [
             'small' => [
                 's' => '600x400',
                 'mode' => 'fit'
             ],
             'post' => [
-                'size' => '500x', 
-                
+                'size' => '500x',
+
             ]
         ],
-        
-        'resize_cdn' => function($img, $resize_opts){
+
+        'resize_cdn' => function ($img, profile $resize_opts) {
             return sanity_resize($img, $resize_opts);
         }
     ],
     'hooks' => [
         'after_build' => function ($conf) {
-            file_put_contents($conf['dist'].'/Version', date("YmdHis"));
+            file_put_contents($conf['dist'] . '/Version', date("YmdHis"));
             `cd {$conf['base']}; rsync -avz dist/ ../htdocs/`;
         }
     ]
