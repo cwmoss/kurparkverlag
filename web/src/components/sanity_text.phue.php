@@ -27,7 +27,7 @@ $serializers = [
         ],
 
     ],
-    'main_image' => function ($item, $parent, $htmlBuilder) use ($ds, $opts, $config) {
+    'main_image' => function ($item, $parent, $htmlBuilder) use ($ds, $config) {
         /*
         example for $item["attributes"]
 

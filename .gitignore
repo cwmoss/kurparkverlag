@@ -4,6 +4,7 @@ vendor/
 logs/
 draft/
 dist/
+htdocs/
 composer.lock
 node_modules/
 .quasar/

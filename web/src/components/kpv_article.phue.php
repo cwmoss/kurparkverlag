@@ -1,6 +1,6 @@
 <article>
 
-  <kpv.image :if="img" :image="img" size="post" :alt="doc.mainImage.caption"></kpv.image>
+  <kpv.image :if="img" :image="img" size="post" :alt="doc.mainImage.caption??''"></kpv.image>
   <h2 :html="title"></h2>
 
   <div>
@@ -26,8 +26,9 @@
 </article>
 <?php
 $doc = $helper->ref($props->section->ref);
-$title = $props->section->title ?: ($doc->title ?: $doc->name);
-$img = $helper->ref($doc->mainImage->asset);
+$title = $props->section->title ?? ($doc->title ?? $doc->name);
+$img = null;
+if ($doc->mainImage->asset ?? null) $img = $helper->ref($doc->mainImage->asset);
 $fmt_date = function ($t) {
   return date('d.m.Y', strtotime($t));
 };

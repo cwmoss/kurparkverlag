@@ -7,15 +7,15 @@ use slowfoot_plugin\phuety\phuety_adapter;
 use slowfoot_plugin\sanity;
 use slowfoot\image\configuration as img_config;
 
-$is_buildhost = preg_match("/kurparkverlag/", $_SERVER['HTTP_HOST']);
-$is_dev = $_ENV["SLFT_ENV"] == "dev";
+$is_buildhost = preg_match("/kurparkverlag/", $_SERVER['HTTP_HOST'] ?? "");
+$is_dev = (($_ENV["SLFT_ENV"] ?? "") == "dev");
 
 return new configuration(
     site_name: 'Kurpark Verlag',
     site_description: 'krimis, ritter vom bka, max müller, spannung, unterhaltung',
     site_url: 'https://kurparkverlag.de',
     // TODO: solve genenv vs ENV problem
-    path_prefix: getenv('PATH_PREFIX') ?: $_ENV['PATH_PREFIX'] ?: '',
+    path_prefix: $_ENV['PATH_PREFIX'] ?? '',
     title_template: '',
     store: 'sqlite',
     template_engine: phuety_adapter::class,

@@ -60,7 +60,7 @@ $serializers = [
         ],
 
     ],
-    'main_image' => function ($item, $parent, $htmlBuilder) use ($ds, $opts, $config) {
+    'main_image' => function ($item, $parent, $htmlBuilder) use ($ds, $config) {
         /*
         example for $item["attributes"]
 
@@ -131,7 +131,7 @@ print $html;
 
     public function debug_info(){
         return array (
-  'src' => '/Users/rw/dev/kurparkverlag/slowfoot/src/components/sanity_text.phue.php',
+  'src' => '/Users/rw/dev/kurparkverlag/web/src/components/sanity_text.phue.php',
   'php' => 1,
 );
     }

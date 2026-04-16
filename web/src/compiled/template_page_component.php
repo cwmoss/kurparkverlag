@@ -55,7 +55,7 @@ class template_page_component extends component {
 
     public function debug_info(){
         return array (
-  'src' => '/Users/rw/dev/kurparkverlag/slowfoot/src/templates/page.phue.php',
+  'src' => '/Users/rw/dev/kurparkverlag/web/src/templates/page.phue.php',
   'php' => NULL,
 );
     }
