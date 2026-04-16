@@ -33,8 +33,9 @@ class kpv_article_component extends component {
     public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
         // dbg("++ props for component", $this->name, $props);
 $doc = $helper->ref($props->section->ref);
-$title = $props->section->title ?: ($doc->title ?: $doc->name);
-$img = $helper->ref($doc->mainImage->asset);
+$title = $props->section->title ?? ($doc->title ?? $doc->name);
+$img = null;
+if ($doc->mainImage->asset ?? null) $img = $helper->ref($doc->mainImage->asset);
 $fmt_date = function ($t) {
   return date('d.m.Y', strtotime($t));
 };
@@ -49,7 +50,7 @@ $fmt_date = function ($t) {
         ?><?= tag::tag_open_merged_attrs("article", [], array (
 ) , $__d->_get("props")) ?>
 
-  <?php if($__d->_get("img")){ ?><?php $__runner($__runner, "kpv.image", $__d->_get("phuety")->with($this->tagname, "kpv.image"), ["image"=> $__d->_get("img"), "alt"=> $__d->_get("doc")->mainImage->caption] + array (
+  <?php if($__d->_get("img")){ ?><?php $__runner($__runner, "kpv.image", $__d->_get("phuety")->with($this->tagname, "kpv.image"), ["image"=> $__d->_get("img"), "alt"=> (($__d->_get("doc")->mainImage->caption) ?? (""))] + array (
   'size' => 'post',
 ) ); ?><?php } ?>
   <h2><?= $__d->_get("title") ?></h2>
@@ -82,7 +83,7 @@ $fmt_date = function ($t) {
 
     public function debug_info(){
         return array (
-  'src' => '/Users/rw/dev/kurparkverlag/slowfoot/src/components/kpv_article.phue.php',
+  'src' => '/Users/rw/dev/kurparkverlag/web/src/components/kpv_article.phue.php',
   'php' => 26,
 );
     }

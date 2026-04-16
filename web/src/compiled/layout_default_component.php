@@ -86,7 +86,7 @@ $footer = array_map(function ($section) use ($helper) {
         <?php foreach($__d->_get("footer") as  $section){$__d->_add_block(["section"=>$section ]); ?><span>
 
           <?= tag::tag_open_merged_attrs("a", ["href"=> $__d->_call("path")($__d->_get("section")->doc)], array (
-) ) ?><?= (($__d->_get("section")->title) ? ($__d->_get("section")->title) : ($__d->_get("section")->doc->title)) ?></a>   
+) ) ?><?= (($__d->_get("section")?->title) ?? ($__d->_get("section")?->doc?->title)) ?></a>   
         </span><?php $__d->_remove_block();} ?>
         <br><br><br>
 
@@ -103,8 +103,8 @@ $footer = array_map(function ($section) use ($helper) {
 
     public function debug_info(){
         return array (
-  'src' => '/Users/rw/dev/kurparkverlag/slowfoot/src/layouts/default.phue.php',
-  'php' => 37,
+  'src' => '/Users/rw/dev/kurparkverlag/web/src/layouts/default.phue.php',
+  'php' => 39,
 );
     }
 }

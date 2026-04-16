@@ -14,10 +14,10 @@ class site {
 
     public static function link_url($link, $helper) {
         $link = array_to_object($link);
-        return $link->internal ?
+        return ($link->internal ?? "") ?
             $helper->path($link->internal->_ref)
-            : ($link->route ? path_page($link->route)
-                : $link->external);
+            : (($link->route ?? "") ? path_page($link->route)
+                : $link->external ?? "");
     }
 
     public static function link($link, $helper): array {

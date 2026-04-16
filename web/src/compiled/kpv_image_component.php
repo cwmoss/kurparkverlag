@@ -45,7 +45,7 @@ print $helper->image_tag((array) $props->image, $props->size, ["alt" => $props->
 
     public function debug_info(){
         return array (
-  'src' => '/Users/rw/dev/kurparkverlag/slowfoot/src/components/kpv_image.phue.php',
+  'src' => '/Users/rw/dev/kurparkverlag/web/src/components/kpv_image.phue.php',
   'php' => 1,
 );
     }
