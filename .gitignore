@@ -20,7 +20,7 @@ download/*
 rendered-images/*
 
 var/
-
+htdocs/
 /node_modules
 
 /lerna-debug.log
