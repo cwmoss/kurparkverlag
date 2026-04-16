@@ -17,8 +17,12 @@ use site;
 use slowfoot_plugin\sanity\sanity;
 
 
+/**
+ * /app/src/components/sanity_text.phue.php ~ 1
+ */
+
 class sanity_text_component extends component {
-    public string $uid = "sanity_text---D9+gF+";
+    public string $uid = "sanity_text---613bf1";
     public bool $is_layout = false;
     public string $name = "sanity_text";
     public string $tagname = "sanity.text";
@@ -129,10 +133,7 @@ print $html;
         // dbg("+++ assetsholder ", $this->is_start, $this->assetholder);
     }
 
-    public function debug_info(){
-        return array (
-  'src' => '/Users/rw/dev/kurparkverlag/web/src/components/sanity_text.phue.php',
-  'php' => 1,
-);
-    }
+    // public function debug_info(){
+    //    return /app/src/components/sanity_text.phue.php ~ 1;
+    // }
 }

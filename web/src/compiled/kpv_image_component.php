@@ -12,8 +12,12 @@ use function phuety\dbg;
 
 
 
+/**
+ * /app/src/components/kpv_image.phue.php ~ 1
+ */
+
 class kpv_image_component extends component {
-    public string $uid = "kpv_image---CMDmss";
+    public string $uid = "kpv_image---c62a39";
     public bool $is_layout = false;
     public string $name = "kpv_image";
     public string $tagname = "kpv.image";
@@ -43,10 +47,7 @@ print $helper->image_tag((array) $props->image, $props->size, ["alt" => $props->
         // dbg("+++ assetsholder ", $this->is_start, $this->assetholder);
     }
 
-    public function debug_info(){
-        return array (
-  'src' => '/Users/rw/dev/kurparkverlag/web/src/components/kpv_image.phue.php',
-  'php' => 1,
-);
-    }
+    // public function debug_info(){
+    //    return /app/src/components/kpv_image.phue.php ~ 1;
+    // }
 }

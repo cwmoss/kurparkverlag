@@ -12,8 +12,12 @@ use function phuety\dbg;
 
 
 
+/**
+ * /app/src/templates/page.phue.php ~ 
+ */
+
 class template_page_component extends component {
-    public string $uid = "template_page---fTwOmP";
+    public string $uid = "template_page---28cd75";
     public bool $is_layout = false;
     public string $name = "template_page";
     public string $tagname = "template.page";
@@ -44,8 +48,8 @@ class template_page_component extends component {
 
   <div class="sections">
 
-    <?php foreach($__d->_get("page")->sections as  $section){$__d->_add_block(["section"=>$section ]); ?><?php $__runner($__runner, "kpv.article", $__d->_get("phuety")->with($this->tagname, "kpv.article"), ["section"=> $__d->_get("section")] + array (
-) ); ?><?php $__d->_remove_block();} ?>
+    <?php if(($_loop_51ceafc2cdd23bb8 = $__d->_get("page")->sections) && ((!$_loop_51ceafc2cdd23bb8 instanceof \Generator && !$_loop_51ceafc2cdd23bb8 instanceof \Iterator) || $_loop_51ceafc2cdd23bb8->valid())) { foreach($_loop_51ceafc2cdd23bb8 as  $section){$__d->_add_block(["section"=>$section ]); ?><?php $__runner($__runner, "kpv.article", $__d->_get("phuety")->with($this->tagname, "kpv.article"), ["section"=> $__d->_get("section")] + array (
+) ); ?><?php $__d->_remove_block();}}  ?>
 
   </div>
 <?php $__runner($__runner, "layout.default", $__d->_get("phuety")->with($this->tagname, "layout.default"), ["page"=> $__d->_get("page")] + array (
@@ -53,10 +57,7 @@ class template_page_component extends component {
         // dbg("+++ assetsholder ", $this->is_start, $this->assetholder);
     }
 
-    public function debug_info(){
-        return array (
-  'src' => '/Users/rw/dev/kurparkverlag/web/src/templates/page.phue.php',
-  'php' => NULL,
-);
-    }
+    // public function debug_info(){
+    //    return /app/src/templates/page.phue.php ~ ;
+    // }
 }

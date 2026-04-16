@@ -12,8 +12,12 @@ use function phuety\dbg;
 
 
 
+/**
+ * /app/src/layouts/default.phue.php ~ 39
+ */
+
 class layout_default_component extends component {
-    public string $uid = "layout_default---Hcr/e0";
+    public string $uid = "layout_default---8fcb4f";
     public bool $is_layout = true;
     public string $name = "layout_default";
     public string $tagname = "layout.default";
@@ -83,11 +87,11 @@ $footer = array_map(function ($section) use ($helper) {
     <footer>
       <p class="home-links"><br>
 
-        <?php foreach($__d->_get("footer") as  $section){$__d->_add_block(["section"=>$section ]); ?><span>
+        <?php if(($_loop_ab6bd4358b9d33de = $__d->_get("footer")) && ((!$_loop_ab6bd4358b9d33de instanceof \Generator && !$_loop_ab6bd4358b9d33de instanceof \Iterator) || $_loop_ab6bd4358b9d33de->valid())) { foreach($_loop_ab6bd4358b9d33de as  $section){$__d->_add_block(["section"=>$section ]); ?><span>
 
           <?= tag::tag_open_merged_attrs("a", ["href"=> $__d->_call("path")($__d->_get("section")->doc)], array (
-) ) ?><?= (($__d->_get("section")?->title) ?? ($__d->_get("section")?->doc?->title)) ?></a>   
-        </span><?php $__d->_remove_block();} ?>
+) ) ?><?= (($__d->_get("section")?->title) ?? ($__d->_get("section")?->doc->title)) ?></a>   
+        </span><?php $__d->_remove_block();}}  ?>
         <br><br><br>
 
       </p>
@@ -101,10 +105,7 @@ $footer = array_map(function ($section) use ($helper) {
         // dbg("+++ assetsholder ", $this->is_start, $this->assetholder);
     }
 
-    public function debug_info(){
-        return array (
-  'src' => '/Users/rw/dev/kurparkverlag/web/src/layouts/default.phue.php',
-  'php' => 39,
-);
-    }
+    // public function debug_info(){
+    //    return /app/src/layouts/default.phue.php ~ 39;
+    // }
 }

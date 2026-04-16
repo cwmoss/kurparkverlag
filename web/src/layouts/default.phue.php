@@ -24,7 +24,7 @@
         <span :foreach="footer as section">
 
           <a :href="path(section.doc)"
-            :html="section?.title??section?.doc?.title">
+            :html="section?.title??section?.doc.title">
           </a>&nbsp;&nbsp;&nbsp;
         </span>
         <br><br><br>

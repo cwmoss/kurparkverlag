@@ -12,8 +12,12 @@ use function phuety\dbg;
 
 
 
+/**
+ * /app/src/components/kpv_article.phue.php ~ 26
+ */
+
 class kpv_article_component extends component {
-    public string $uid = "kpv_article---A/zEkH";
+    public string $uid = "kpv_article---dd67e0";
     public bool $is_layout = false;
     public string $name = "kpv_article";
     public string $tagname = "kpv.article";
@@ -60,11 +64,11 @@ $fmt_date = function ($t) {
       <p><?= $__d->_get("doc")->title ?></p>
       <table class="termine">
         <tbody>
-          <?php foreach($__d->_get("doc")->events as  $termin){$__d->_add_block(["termin"=>$termin ]); ?><tr>
+          <?php if(($_loop_516b51f35cf4d592 = $__d->_get("doc")->events) && ((!$_loop_516b51f35cf4d592 instanceof \Generator && !$_loop_516b51f35cf4d592 instanceof \Iterator) || $_loop_516b51f35cf4d592->valid())) { foreach($_loop_516b51f35cf4d592 as  $termin){$__d->_add_block(["termin"=>$termin ]); ?><tr>
             <td><?= tag::h($__d->_call("fmt_date")($__d->_get("termin")->start)) ?></td>
             <td><strong><?= tag::h($__d->_get("termin")->city) ?></strong></td>
             <td><?= tag::h($__d->_get("termin")->location) ?></td>
-          </tr><?php $__d->_remove_block();} ?>
+          </tr><?php $__d->_remove_block();}}  ?>
         </tbody>
       </table>
     <?php } ?>
@@ -81,10 +85,7 @@ $fmt_date = function ($t) {
         // dbg("+++ assetsholder ", $this->is_start, $this->assetholder);
     }
 
-    public function debug_info(){
-        return array (
-  'src' => '/Users/rw/dev/kurparkverlag/web/src/components/kpv_article.phue.php',
-  'php' => 26,
-);
-    }
+    // public function debug_info(){
+    //    return /app/src/components/kpv_article.phue.php ~ 26;
+    // }
 }

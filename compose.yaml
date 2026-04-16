@@ -1,0 +1,10 @@
+services:
+  deploy:
+    image: php:8.4.20-apache
+    volumes:
+      - ./htdocs/:/var/www/html/
+      - ./web/webdeploy/:/var/www/html/__deploy/
+      - ./slowfoot-x86:/usr/local/bin/slowfoot
+      - ./web/:/app/
+    ports:
+      - 1226:80

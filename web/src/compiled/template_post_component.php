@@ -12,8 +12,12 @@ use function phuety\dbg;
 
 
 
+/**
+ * /app/src/templates/post.phue.php ~ 13
+ */
+
 class template_post_component extends component {
-    public string $uid = "template_post---e+tKKN";
+    public string $uid = "template_post---bff6da";
     public bool $is_layout = false;
     public string $name = "template_post";
     public string $tagname = "template.post";
@@ -60,10 +64,7 @@ class template_post_component extends component {
         // dbg("+++ assetsholder ", $this->is_start, $this->assetholder);
     }
 
-    public function debug_info(){
-        return array (
-  'src' => '/Users/rw/dev/kurparkverlag/web/src/templates/post.phue.php',
-  'php' => 13,
-);
-    }
+    // public function debug_info(){
+    //    return /app/src/templates/post.phue.php ~ 13;
+    // }
 }
