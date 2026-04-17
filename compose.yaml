@@ -1,10 +1,15 @@
 services:
   deploy:
-    image: php:8.4.20-apache
+    image: php:7-apache
+    # image: php:8.4.20-apache
+    environment:
+      - SLFT_BUILD_KEY=1234
+      - SLFT_PHP_BIN=/usr/local/bin/slowfoot
+      - SLFT_PROJECT_DIR=/app
     volumes:
       - ./htdocs/:/var/www/html/
       - ./web/webdeploy/:/var/www/html/__deploy/
-      - ./slowfoot-x86:/usr/local/bin/slowfoot
+      - ./slowfoot-aarch64:/usr/local/bin/slowfoot
       - ./web/:/app/
     ports:
       - 1226:80

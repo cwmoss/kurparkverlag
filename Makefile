@@ -16,3 +16,7 @@ build-host-update:
 
 build-host-writeable:
 	ssh -t $(HOST) 'sudo chmod -R 0777 /var/www/vhosts/kurparkverlag/slowfoot/'
+
+bin:
+	tar xfz ../slowfoot/build/slowfoot-linux-x86_64.tar.gz && mv slowfoot slowfoot-x86_64
+	tar xfz ../slowfoot/build/slowfoot-linux-aarch64.tar.gz && mv slowfoot slowfoot-aarch64
