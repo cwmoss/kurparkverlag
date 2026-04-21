@@ -13,7 +13,7 @@ use function phuety\dbg;
 
 
 /**
- * /app/src/components/kpv_article.phue.php ~ 26
+ * /Users/rw/dev/kurparkverlag/web/src/components/kpv_article.phue.php ~ 26
  */
 
 class kpv_article_component extends component {
@@ -34,7 +34,7 @@ class kpv_article_component extends component {
   1 => 'sanity.text',
 );
 
-    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
+    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): ?array{
         // dbg("++ props for component", $this->name, $props);
 $doc = $helper->ref($props->section->ref);
 $title = $props->section->title ?? ($doc->title ?? $doc->name);
@@ -86,6 +86,6 @@ $fmt_date = function ($t) {
     }
 
     // public function debug_info(){
-    //    return /app/src/components/kpv_article.phue.php ~ 26;
+    //    return /Users/rw/dev/kurparkverlag/web/src/components/kpv_article.phue.php ~ 26;
     // }
 }

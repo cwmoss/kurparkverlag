@@ -13,7 +13,7 @@ use function phuety\dbg;
 
 
 /**
- * /app/src/templates/page.phue.php ~ 
+ * /Users/rw/dev/kurparkverlag/web/src/templates/page.phue.php ~ 
  */
 
 class template_page_component extends component {
@@ -34,7 +34,7 @@ class template_page_component extends component {
   1 => 'kpv.article',
 );
 
-    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
+    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): ?array{
         // dbg("++ props for component", $this->name, $props);
         return get_defined_vars();
     }
@@ -58,6 +58,6 @@ class template_page_component extends component {
     }
 
     // public function debug_info(){
-    //    return /app/src/templates/page.phue.php ~ ;
+    //    return /Users/rw/dev/kurparkverlag/web/src/templates/page.phue.php ~ ;
     // }
 }

@@ -13,7 +13,7 @@ use function phuety\dbg;
 
 
 /**
- * /app/src/layouts/default.phue.php ~ 39
+ * /Users/rw/dev/kurparkverlag/web/src/layouts/default.phue.php ~ 39
  */
 
 class layout_default_component extends component {
@@ -33,7 +33,7 @@ class layout_default_component extends component {
   0 => 'phuety.assets',
 );
 
-    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
+    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): ?array{
         // dbg("++ props for component", $this->name, $props);
 $settings = $helper->get('siteSettings');
 $doc_title = $settings->title;
@@ -106,6 +106,6 @@ $footer = array_map(function ($section) use ($helper) {
     }
 
     // public function debug_info(){
-    //    return /app/src/layouts/default.phue.php ~ 39;
+    //    return /Users/rw/dev/kurparkverlag/web/src/layouts/default.phue.php ~ 39;
     // }
 }

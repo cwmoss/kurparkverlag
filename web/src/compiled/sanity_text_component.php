@@ -18,7 +18,7 @@ use slowfoot_plugin\sanity\sanity;
 
 
 /**
- * /app/src/components/sanity_text.phue.php ~ 1
+ * /Users/rw/dev/kurparkverlag/web/src/components/sanity_text.phue.php ~ 1
  */
 
 class sanity_text_component extends component {
@@ -36,7 +36,7 @@ class sanity_text_component extends component {
     public int $total_rootelements = 0;
     public ?array $components = NULL;
 
-    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
+    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): ?array{
         // dbg("++ props for component", $this->name, $props);<?php
 
 
@@ -134,6 +134,6 @@ print $html;
     }
 
     // public function debug_info(){
-    //    return /app/src/components/sanity_text.phue.php ~ 1;
+    //    return /Users/rw/dev/kurparkverlag/web/src/components/sanity_text.phue.php ~ 1;
     // }
 }

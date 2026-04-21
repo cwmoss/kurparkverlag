@@ -13,7 +13,7 @@ use function phuety\dbg;
 
 
 /**
- * /app/src/templates/post.phue.php ~ 13
+ * /Users/rw/dev/kurparkverlag/web/src/templates/post.phue.php ~ 13
  */
 
 class template_post_component extends component {
@@ -34,10 +34,9 @@ class template_post_component extends component {
   1 => 'sanity.text',
 );
 
-    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
+    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): ?array{
         // dbg("++ props for component", $this->name, $props);
-// TODO: intercept page write
-// if ($page['is_page'] != true) return null;
+// if ($props->page->is_page != true) return null;
 
         return get_defined_vars();
     }
@@ -65,6 +64,6 @@ class template_post_component extends component {
     }
 
     // public function debug_info(){
-    //    return /app/src/templates/post.phue.php ~ 13;
+    //    return /Users/rw/dev/kurparkverlag/web/src/templates/post.phue.php ~ 13;
     // }
 }

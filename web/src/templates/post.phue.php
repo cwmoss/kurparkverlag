@@ -12,5 +12,4 @@
     </div>
 </layout.default>
 <?php
-// TODO: intercept page write
-// if ($page['is_page'] != true) return null;
+// if ($props->page->is_page != true) return null;

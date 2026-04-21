@@ -6,6 +6,7 @@ use slowfoot\image\profile;
 use slowfoot_plugin\phuety\phuety_adapter;
 use slowfoot_plugin\sanity;
 use slowfoot\image\configuration as img_config;
+use slowfoot\path;
 
 $is_buildhost = preg_match("/kurparkverlag/", $_SERVER['HTTP_HOST'] ?? "");
 $is_dev = (($_ENV["SLFT_ENV"] ?? "") == "dev");
@@ -26,7 +27,7 @@ return new configuration(
         'sanity' => sanity\sanity::data_loader(...)
     ],
     templates: [
-        'post' => '/p/:slug.current',
+        'post' => new path('/p/:slug.current')->reject_if(fn($it) => !$it["is_page"])->make_function(),
         'page' => '/:slug.current',
     ],
     assets: new img_config(

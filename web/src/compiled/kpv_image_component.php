@@ -13,7 +13,7 @@ use function phuety\dbg;
 
 
 /**
- * /app/src/components/kpv_image.phue.php ~ 1
+ * /Users/rw/dev/kurparkverlag/web/src/components/kpv_image.phue.php ~ 1
  */
 
 class kpv_image_component extends component {
@@ -31,7 +31,7 @@ class kpv_image_component extends component {
     public int $total_rootelements = 0;
     public ?array $components = NULL;
 
-    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): array{
+    public function run_code(data_container $props, array $slots, data_container $helper, phuety_context $phuety, asset $assetholder): ?array{
         // dbg("++ props for component", $this->name, $props);<?php
 // $image_tag($img, 'post', ['alt' => $doc['mainImage']['caption']]
 print $helper->image_tag((array) $props->image, $props->size, ["alt" => $props->alt]);
@@ -48,6 +48,6 @@ print $helper->image_tag((array) $props->image, $props->size, ["alt" => $props->
     }
 
     // public function debug_info(){
-    //    return /app/src/components/kpv_image.phue.php ~ 1;
+    //    return /Users/rw/dev/kurparkverlag/web/src/components/kpv_image.phue.php ~ 1;
     // }
 }
